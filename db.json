@@ -1755,7 +1755,8 @@
       "amount": 3451.35,
       "currency": "INR",
       "unitsConsumedKwh": 460.18,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00002",
@@ -1797,7 +1798,8 @@
       "amount": 2463.38,
       "currency": "INR",
       "unitsConsumedKwh": 328.45,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00005",
@@ -1839,7 +1841,8 @@
       "amount": 3471.83,
       "currency": "INR",
       "unitsConsumedKwh": 462.91,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00008",
@@ -1881,7 +1884,8 @@
       "amount": 1936.42,
       "currency": "INR",
       "unitsConsumedKwh": 258.19,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00011",
@@ -1951,7 +1955,8 @@
       "amount": 2584.42,
       "currency": "INR",
       "unitsConsumedKwh": 344.59,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00016",
@@ -1993,7 +1998,8 @@
       "amount": 2250.38,
       "currency": "INR",
       "unitsConsumedKwh": 300.05,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00019",
@@ -2035,7 +2041,8 @@
       "amount": 2116.05,
       "currency": "INR",
       "unitsConsumedKwh": 282.14,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00022",
@@ -2077,7 +2084,8 @@
       "amount": 3661.73,
       "currency": "INR",
       "unitsConsumedKwh": 488.23,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00025",
@@ -2105,7 +2113,8 @@
       "amount": 2172.98,
       "currency": "INR",
       "unitsConsumedKwh": 289.73,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00027",
@@ -2147,7 +2156,8 @@
       "amount": 4471.35,
       "currency": "INR",
       "unitsConsumedKwh": 596.18,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00030",
@@ -2189,7 +2199,8 @@
       "amount": 2914.88,
       "currency": "INR",
       "unitsConsumedKwh": 388.65,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00033",
@@ -2231,7 +2242,8 @@
       "amount": 4404.82,
       "currency": "INR",
       "unitsConsumedKwh": 587.31,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00036",
@@ -2259,7 +2271,8 @@
       "amount": 5074.13,
       "currency": "INR",
       "unitsConsumedKwh": 676.55,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00038",
@@ -2301,7 +2314,8 @@
       "amount": 4839.82,
       "currency": "INR",
       "unitsConsumedKwh": 645.31,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00041",
@@ -2343,7 +2357,8 @@
       "amount": 3865.57,
       "currency": "INR",
       "unitsConsumedKwh": 515.41,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00044",
@@ -2385,7 +2400,8 @@
       "amount": 3955.5,
       "currency": "INR",
       "unitsConsumedKwh": 527.4,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00047",
@@ -2455,7 +2471,8 @@
       "amount": 3933.53,
       "currency": "INR",
       "unitsConsumedKwh": 524.47,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00052",
@@ -2497,7 +2514,8 @@
       "amount": 2211.38,
       "currency": "INR",
       "unitsConsumedKwh": 294.85,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00055",
@@ -2539,7 +2557,8 @@
       "amount": 5047.05,
       "currency": "INR",
       "unitsConsumedKwh": 672.94,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00058",
@@ -2581,7 +2600,8 @@
       "amount": 3848.18,
       "currency": "INR",
       "unitsConsumedKwh": 513.09,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00061",
@@ -2609,7 +2629,8 @@
       "amount": 3052.5,
       "currency": "INR",
       "unitsConsumedKwh": 407,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00063",
@@ -2651,7 +2672,8 @@
       "amount": 4116.9,
       "currency": "INR",
       "unitsConsumedKwh": 548.92,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00066",
@@ -2693,7 +2715,8 @@
       "amount": 5392.35,
       "currency": "INR",
       "unitsConsumedKwh": 718.98,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00069",
@@ -2735,7 +2758,8 @@
       "amount": 3792.38,
       "currency": "INR",
       "unitsConsumedKwh": 505.65,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00072",
@@ -2763,7 +2787,8 @@
       "amount": 3034.72,
       "currency": "INR",
       "unitsConsumedKwh": 404.63,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00074",
@@ -2805,7 +2830,8 @@
       "amount": 5052.3,
       "currency": "INR",
       "unitsConsumedKwh": 673.64,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00077",
@@ -2847,7 +2873,8 @@
       "amount": 2005.65,
       "currency": "INR",
       "unitsConsumedKwh": 267.42,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00080",
@@ -2889,7 +2916,8 @@
       "amount": 3794.17,
       "currency": "INR",
       "unitsConsumedKwh": 505.89,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00083",
@@ -2959,7 +2987,8 @@
       "amount": 3024.75,
       "currency": "INR",
       "unitsConsumedKwh": 403.3,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00088",
@@ -3001,7 +3030,8 @@
       "amount": 5136.68,
       "currency": "INR",
       "unitsConsumedKwh": 684.89,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00091",
@@ -3043,7 +3073,8 @@
       "amount": 3918.9,
       "currency": "INR",
       "unitsConsumedKwh": 522.52,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00094",
@@ -3085,7 +3116,8 @@
       "amount": 4940.1,
       "currency": "INR",
       "unitsConsumedKwh": 658.68,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00097",
@@ -3113,7 +3145,8 @@
       "amount": 3548.17,
       "currency": "INR",
       "unitsConsumedKwh": 473.09,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00099",
@@ -3155,7 +3188,8 @@
       "amount": 2759.55,
       "currency": "INR",
       "unitsConsumedKwh": 367.94,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00102",
@@ -3197,7 +3231,8 @@
       "amount": 4041.82,
       "currency": "INR",
       "unitsConsumedKwh": 538.91,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00105",
@@ -3239,7 +3274,8 @@
       "amount": 3724.88,
       "currency": "INR",
       "unitsConsumedKwh": 496.65,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00108",
@@ -3267,7 +3303,8 @@
       "amount": 4404.23,
       "currency": "INR",
       "unitsConsumedKwh": 587.23,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00110",
@@ -3309,7 +3346,8 @@
       "amount": 2964.9,
       "currency": "INR",
       "unitsConsumedKwh": 395.32,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00113",
@@ -3351,7 +3389,8 @@
       "amount": 4569.98,
       "currency": "INR",
       "unitsConsumedKwh": 609.33,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00116",
@@ -3393,7 +3432,8 @@
       "amount": 4229.63,
       "currency": "INR",
       "unitsConsumedKwh": 563.95,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00119",
@@ -3463,7 +3503,8 @@
       "amount": 3540.07,
       "currency": "INR",
       "unitsConsumedKwh": 472.01,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00124",
@@ -3505,7 +3546,8 @@
       "amount": 3216.3,
       "currency": "INR",
       "unitsConsumedKwh": 428.84,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00127",
@@ -3547,7 +3589,8 @@
       "amount": 3182.32,
       "currency": "INR",
       "unitsConsumedKwh": 424.31,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00130",
@@ -3589,7 +3632,8 @@
       "amount": 4271.03,
       "currency": "INR",
       "unitsConsumedKwh": 569.47,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00133",
@@ -3617,7 +3661,8 @@
       "amount": 3597.15,
       "currency": "INR",
       "unitsConsumedKwh": 479.62,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00135",
@@ -3659,7 +3704,8 @@
       "amount": 3522.3,
       "currency": "INR",
       "unitsConsumedKwh": 469.64,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00138",
@@ -3701,7 +3747,8 @@
       "amount": 4329.15,
       "currency": "INR",
       "unitsConsumedKwh": 577.22,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00141",
@@ -3743,7 +3790,8 @@
       "amount": 4317,
       "currency": "INR",
       "unitsConsumedKwh": 575.6,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00144",
@@ -3771,7 +3819,8 @@
       "amount": 3103.95,
       "currency": "INR",
       "unitsConsumedKwh": 413.86,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00146",
@@ -3813,7 +3862,8 @@
       "amount": 3658.57,
       "currency": "INR",
       "unitsConsumedKwh": 487.81,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00149",
@@ -3855,7 +3905,8 @@
       "amount": 3003.68,
       "currency": "INR",
       "unitsConsumedKwh": 400.49,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00152",
@@ -3897,7 +3948,8 @@
       "amount": 2687.78,
       "currency": "INR",
       "unitsConsumedKwh": 358.37,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00155",
@@ -3967,7 +4019,8 @@
       "amount": 1993.95,
       "currency": "INR",
       "unitsConsumedKwh": 265.86,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00160",
@@ -4009,7 +4062,8 @@
       "amount": 2492.02,
       "currency": "INR",
       "unitsConsumedKwh": 332.27,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00163",
@@ -4051,7 +4105,8 @@
       "amount": 2989.2,
       "currency": "INR",
       "unitsConsumedKwh": 398.56,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00166",
@@ -4093,7 +4148,8 @@
       "amount": 3972.98,
       "currency": "INR",
       "unitsConsumedKwh": 529.73,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00169",
@@ -4121,7 +4177,8 @@
       "amount": 3579.9,
       "currency": "INR",
       "unitsConsumedKwh": 477.32,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00171",
@@ -4163,7 +4220,8 @@
       "amount": 2699.17,
       "currency": "INR",
       "unitsConsumedKwh": 359.89,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00174",
@@ -4205,7 +4263,8 @@
       "amount": 4101.82,
       "currency": "INR",
       "unitsConsumedKwh": 546.91,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00177",
@@ -4247,7 +4306,8 @@
       "amount": 2551.2,
       "currency": "INR",
       "unitsConsumedKwh": 340.16,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00180",
@@ -4275,7 +4335,8 @@
       "amount": 4581.3,
       "currency": "INR",
       "unitsConsumedKwh": 610.84,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00182",
@@ -4317,7 +4378,8 @@
       "amount": 4998.45,
       "currency": "INR",
       "unitsConsumedKwh": 666.46,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00185",
@@ -4359,7 +4421,8 @@
       "amount": 3072.38,
       "currency": "INR",
       "unitsConsumedKwh": 409.65,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00188",
@@ -4401,7 +4464,8 @@
       "amount": 2378.7,
       "currency": "INR",
       "unitsConsumedKwh": 317.16,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00191",
@@ -4471,7 +4535,8 @@
       "amount": 2027.7,
       "currency": "INR",
       "unitsConsumedKwh": 270.36,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00196",
@@ -4513,7 +4578,8 @@
       "amount": 3291.22,
       "currency": "INR",
       "unitsConsumedKwh": 438.83,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00199",
@@ -4555,7 +4621,8 @@
       "amount": 4245.53,
       "currency": "INR",
       "unitsConsumedKwh": 566.07,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00202",
@@ -4597,7 +4664,8 @@
       "amount": 4842.3,
       "currency": "INR",
       "unitsConsumedKwh": 645.64,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00205",
@@ -4625,7 +4693,8 @@
       "amount": 3330.45,
       "currency": "INR",
       "unitsConsumedKwh": 444.06,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00207",
@@ -4667,7 +4736,8 @@
       "amount": 2462.7,
       "currency": "INR",
       "unitsConsumedKwh": 328.36,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00210",
@@ -4709,7 +4779,8 @@
       "amount": 3711.3,
       "currency": "INR",
       "unitsConsumedKwh": 494.84,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00213",
@@ -4751,7 +4822,8 @@
       "amount": 2900.85,
       "currency": "INR",
       "unitsConsumedKwh": 386.78,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00216",
@@ -4779,7 +4851,8 @@
       "amount": 4522.28,
       "currency": "INR",
       "unitsConsumedKwh": 602.97,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00218",
@@ -4821,7 +4894,8 @@
       "amount": 1983,
       "currency": "INR",
       "unitsConsumedKwh": 264.4,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00221",
@@ -4863,7 +4937,8 @@
       "amount": 3776.78,
       "currency": "INR",
       "unitsConsumedKwh": 503.57,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00224",
@@ -4905,7 +4980,8 @@
       "amount": 2427.38,
       "currency": "INR",
       "unitsConsumedKwh": 323.65,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00227",
@@ -4975,7 +5051,8 @@
       "amount": 5263.88,
       "currency": "INR",
       "unitsConsumedKwh": 701.85,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00232",
@@ -5017,7 +5094,8 @@
       "amount": 1984.35,
       "currency": "INR",
       "unitsConsumedKwh": 264.58,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00235",
@@ -5059,7 +5137,8 @@
       "amount": 2531.78,
       "currency": "INR",
       "unitsConsumedKwh": 337.57,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00238",
@@ -5101,7 +5180,8 @@
       "amount": 5109.08,
       "currency": "INR",
       "unitsConsumedKwh": 681.21,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00241",
@@ -5129,7 +5209,8 @@
       "amount": 5215.95,
       "currency": "INR",
       "unitsConsumedKwh": 695.46,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00243",
@@ -5171,7 +5252,8 @@
       "amount": 4203.97,
       "currency": "INR",
       "unitsConsumedKwh": 560.53,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00246",
@@ -5213,7 +5295,8 @@
       "amount": 3309.6,
       "currency": "INR",
       "unitsConsumedKwh": 441.28,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00249",
@@ -5255,7 +5338,8 @@
       "amount": 3123.82,
       "currency": "INR",
       "unitsConsumedKwh": 416.51,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00252",
@@ -5283,7 +5367,8 @@
       "amount": 3244.05,
       "currency": "INR",
       "unitsConsumedKwh": 432.54,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00254",
@@ -5325,7 +5410,8 @@
       "amount": 3340.95,
       "currency": "INR",
       "unitsConsumedKwh": 445.46,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00257",
@@ -5367,7 +5453,8 @@
       "amount": 2958.75,
       "currency": "INR",
       "unitsConsumedKwh": 394.5,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00260",
@@ -5409,7 +5496,8 @@
       "amount": 2208.9,
       "currency": "INR",
       "unitsConsumedKwh": 294.52,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00263",
@@ -5479,7 +5567,8 @@
       "amount": 1880.7,
       "currency": "INR",
       "unitsConsumedKwh": 250.76,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00268",
@@ -5521,7 +5610,8 @@
       "amount": 3067.72,
       "currency": "INR",
       "unitsConsumedKwh": 409.03,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00271",
@@ -5563,7 +5653,8 @@
       "amount": 2443.65,
       "currency": "INR",
       "unitsConsumedKwh": 325.82,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00274",
@@ -5605,7 +5696,8 @@
       "amount": 3492,
       "currency": "INR",
       "unitsConsumedKwh": 465.6,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00277",
@@ -5633,7 +5725,8 @@
       "amount": 4674.98,
       "currency": "INR",
       "unitsConsumedKwh": 623.33,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00279",
@@ -5675,7 +5768,8 @@
       "amount": 3870,
       "currency": "INR",
       "unitsConsumedKwh": 516,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00282",
@@ -5717,7 +5811,8 @@
       "amount": 3459.68,
       "currency": "INR",
       "unitsConsumedKwh": 461.29,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00285",
@@ -5759,7 +5854,8 @@
       "amount": 4166.93,
       "currency": "INR",
       "unitsConsumedKwh": 555.59,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00288",
@@ -5787,7 +5883,8 @@
       "amount": 4480.35,
       "currency": "INR",
       "unitsConsumedKwh": 597.38,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00290",
@@ -5829,7 +5926,8 @@
       "amount": 2002.5,
       "currency": "INR",
       "unitsConsumedKwh": 267,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00293",
@@ -5871,7 +5969,8 @@
       "amount": 2543.93,
       "currency": "INR",
       "unitsConsumedKwh": 339.19,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00296",
@@ -5913,7 +6012,8 @@
       "amount": 5257.43,
       "currency": "INR",
       "unitsConsumedKwh": 700.99,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00299",
@@ -5983,7 +6083,8 @@
       "amount": 4474.43,
       "currency": "INR",
       "unitsConsumedKwh": 596.59,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00304",
@@ -6025,7 +6126,8 @@
       "amount": 3578.33,
       "currency": "INR",
       "unitsConsumedKwh": 477.11,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00307",
@@ -6067,7 +6169,8 @@
       "amount": 2136.9,
       "currency": "INR",
       "unitsConsumedKwh": 284.92,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00310",
@@ -6109,7 +6212,8 @@
       "amount": 3932.78,
       "currency": "INR",
       "unitsConsumedKwh": 524.37,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00313",
@@ -6137,7 +6241,8 @@
       "amount": 5052.07,
       "currency": "INR",
       "unitsConsumedKwh": 673.61,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00315",
@@ -6179,7 +6284,8 @@
       "amount": 2808.6,
       "currency": "INR",
       "unitsConsumedKwh": 374.48,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00318",
@@ -6221,7 +6327,8 @@
       "amount": 3265.5,
       "currency": "INR",
       "unitsConsumedKwh": 435.4,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00321",
@@ -6263,7 +6370,8 @@
       "amount": 2811.83,
       "currency": "INR",
       "unitsConsumedKwh": 374.91,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00324",
@@ -6291,7 +6399,8 @@
       "amount": 2688.3,
       "currency": "INR",
       "unitsConsumedKwh": 358.44,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00326",
@@ -6333,7 +6442,8 @@
       "amount": 2159.33,
       "currency": "INR",
       "unitsConsumedKwh": 287.91,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00329",
@@ -6375,7 +6485,8 @@
       "amount": 3387.6,
       "currency": "INR",
       "unitsConsumedKwh": 451.68,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00332",
@@ -6417,7 +6528,8 @@
       "amount": 2784.3,
       "currency": "INR",
       "unitsConsumedKwh": 371.24,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00335",
@@ -6487,7 +6599,8 @@
       "amount": 3069.45,
       "currency": "INR",
       "unitsConsumedKwh": 409.26,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00340",
@@ -6529,7 +6642,8 @@
       "amount": 4740.98,
       "currency": "INR",
       "unitsConsumedKwh": 632.13,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00343",
@@ -6571,7 +6685,8 @@
       "amount": 4632.15,
       "currency": "INR",
       "unitsConsumedKwh": 617.62,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00346",
@@ -6613,7 +6728,8 @@
       "amount": 4805.85,
       "currency": "INR",
       "unitsConsumedKwh": 640.78,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00349",
@@ -6641,7 +6757,8 @@
       "amount": 5199.82,
       "currency": "INR",
       "unitsConsumedKwh": 693.31,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00351",
@@ -6683,7 +6800,8 @@
       "amount": 5298.3,
       "currency": "INR",
       "unitsConsumedKwh": 706.44,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00354",
@@ -6725,7 +6843,8 @@
       "amount": 3390.22,
       "currency": "INR",
       "unitsConsumedKwh": 452.03,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00357",
@@ -6767,7 +6886,8 @@
       "amount": 4349.18,
       "currency": "INR",
       "unitsConsumedKwh": 579.89,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00360",
@@ -6795,7 +6915,8 @@
       "amount": 2731.95,
       "currency": "INR",
       "unitsConsumedKwh": 364.26,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00362",
@@ -6837,7 +6958,8 @@
       "amount": 3156.07,
       "currency": "INR",
       "unitsConsumedKwh": 420.81,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00365",
@@ -6879,7 +7001,8 @@
       "amount": 2519.4,
       "currency": "INR",
       "unitsConsumedKwh": 335.92,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00368",
@@ -6921,7 +7044,8 @@
       "amount": 4351.05,
       "currency": "INR",
       "unitsConsumedKwh": 580.14,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00371",
@@ -6991,7 +7115,8 @@
       "amount": 1919.48,
       "currency": "INR",
       "unitsConsumedKwh": 255.93,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00376",
@@ -7033,7 +7158,8 @@
       "amount": 4545.98,
       "currency": "INR",
       "unitsConsumedKwh": 606.13,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00379",
@@ -7075,7 +7201,8 @@
       "amount": 3146.25,
       "currency": "INR",
       "unitsConsumedKwh": 419.5,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00382",
@@ -7117,7 +7244,8 @@
       "amount": 5370,
       "currency": "INR",
       "unitsConsumedKwh": 716,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00385",
@@ -7145,7 +7273,8 @@
       "amount": 4688.03,
       "currency": "INR",
       "unitsConsumedKwh": 625.07,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00387",
@@ -7187,7 +7316,8 @@
       "amount": 3618.3,
       "currency": "INR",
       "unitsConsumedKwh": 482.44,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00390",
@@ -7229,7 +7359,8 @@
       "amount": 4992.07,
       "currency": "INR",
       "unitsConsumedKwh": 665.61,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00393",
@@ -7271,7 +7402,8 @@
       "amount": 3312,
       "currency": "INR",
       "unitsConsumedKwh": 441.6,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00396",
@@ -7299,7 +7431,8 @@
       "amount": 2456.4,
       "currency": "INR",
       "unitsConsumedKwh": 327.52,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00398",
@@ -7341,7 +7474,8 @@
       "amount": 2963.85,
       "currency": "INR",
       "unitsConsumedKwh": 395.18,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00401",
@@ -7383,7 +7517,8 @@
       "amount": 4942.8,
       "currency": "INR",
       "unitsConsumedKwh": 659.04,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00404",
@@ -7425,7 +7560,8 @@
       "amount": 4519.28,
       "currency": "INR",
       "unitsConsumedKwh": 602.57,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00407",
@@ -7495,7 +7631,8 @@
       "amount": 3657.9,
       "currency": "INR",
       "unitsConsumedKwh": 487.72,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00412",
@@ -7537,7 +7674,8 @@
       "amount": 2146.13,
       "currency": "INR",
       "unitsConsumedKwh": 286.15,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00415",
@@ -7579,7 +7717,8 @@
       "amount": 3634.72,
       "currency": "INR",
       "unitsConsumedKwh": 484.63,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00418",
@@ -7621,7 +7760,8 @@
       "amount": 2006.55,
       "currency": "INR",
       "unitsConsumedKwh": 267.54,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00421",
@@ -7649,7 +7789,8 @@
       "amount": 4359.9,
       "currency": "INR",
       "unitsConsumedKwh": 581.32,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00423",
@@ -7691,7 +7832,8 @@
       "amount": 3174.3,
       "currency": "INR",
       "unitsConsumedKwh": 423.24,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00426",
@@ -7733,7 +7875,8 @@
       "amount": 4698.53,
       "currency": "INR",
       "unitsConsumedKwh": 626.47,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00429",
@@ -7775,7 +7918,8 @@
       "amount": 3384.23,
       "currency": "INR",
       "unitsConsumedKwh": 451.23,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00432",
@@ -7803,7 +7947,8 @@
       "amount": 3727.72,
       "currency": "INR",
       "unitsConsumedKwh": 497.03,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00434",
@@ -7845,7 +7990,8 @@
       "amount": 2567.55,
       "currency": "INR",
       "unitsConsumedKwh": 342.34,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00437",
@@ -7887,7 +8033,8 @@
       "amount": 4602.9,
       "currency": "INR",
       "unitsConsumedKwh": 613.72,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00440",
@@ -7929,7 +8076,8 @@
       "amount": 1894.2,
       "currency": "INR",
       "unitsConsumedKwh": 252.56,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00443",
@@ -7999,7 +8147,8 @@
       "amount": 2055.15,
       "currency": "INR",
       "unitsConsumedKwh": 274.02,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00448",
@@ -8041,7 +8190,8 @@
       "amount": 4592.77,
       "currency": "INR",
       "unitsConsumedKwh": 612.37,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00451",
@@ -8083,7 +8233,8 @@
       "amount": 2606.63,
       "currency": "INR",
       "unitsConsumedKwh": 347.55,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00454",
@@ -8125,7 +8276,8 @@
       "amount": 5285.18,
       "currency": "INR",
       "unitsConsumedKwh": 704.69,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00457",
@@ -8153,7 +8305,8 @@
       "amount": 2367.38,
       "currency": "INR",
       "unitsConsumedKwh": 315.65,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00459",
@@ -8195,7 +8348,8 @@
       "amount": 5046.23,
       "currency": "INR",
       "unitsConsumedKwh": 672.83,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00462",
@@ -8237,7 +8391,8 @@
       "amount": 5078.03,
       "currency": "INR",
       "unitsConsumedKwh": 677.07,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00465",
@@ -8279,7 +8434,8 @@
       "amount": 1889.78,
       "currency": "INR",
       "unitsConsumedKwh": 251.97,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00468",
@@ -8307,7 +8463,8 @@
       "amount": 3794.55,
       "currency": "INR",
       "unitsConsumedKwh": 505.94,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00470",
@@ -8349,7 +8506,8 @@
       "amount": 4708.95,
       "currency": "INR",
       "unitsConsumedKwh": 627.86,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00473",
@@ -8391,7 +8549,8 @@
       "amount": 2264.03,
       "currency": "INR",
       "unitsConsumedKwh": 301.87,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00476",
@@ -8433,7 +8592,8 @@
       "amount": 5397.52,
       "currency": "INR",
       "unitsConsumedKwh": 719.67,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00479",
@@ -8503,7 +8663,8 @@
       "amount": 2390.77,
       "currency": "INR",
       "unitsConsumedKwh": 318.77,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00484",
@@ -8545,7 +8706,8 @@
       "amount": 4706.03,
       "currency": "INR",
       "unitsConsumedKwh": 627.47,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00487",
@@ -8587,7 +8749,8 @@
       "amount": 3366.22,
       "currency": "INR",
       "unitsConsumedKwh": 448.83,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00490",
@@ -8629,7 +8792,8 @@
       "amount": 5232.6,
       "currency": "INR",
       "unitsConsumedKwh": 697.68,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00493",
@@ -8657,7 +8821,8 @@
       "amount": 4451.93,
       "currency": "INR",
       "unitsConsumedKwh": 593.59,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00495",
@@ -8699,7 +8864,8 @@
       "amount": 3986.85,
       "currency": "INR",
       "unitsConsumedKwh": 531.58,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00498",
@@ -8741,7 +8907,8 @@
       "amount": 4438.27,
       "currency": "INR",
       "unitsConsumedKwh": 591.77,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00501",
@@ -8783,7 +8950,8 @@
       "amount": 2744.33,
       "currency": "INR",
       "unitsConsumedKwh": 365.91,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00504",
@@ -8811,7 +8979,8 @@
       "amount": 3720.67,
       "currency": "INR",
       "unitsConsumedKwh": 496.09,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00506",
@@ -8853,7 +9022,8 @@
       "amount": 2067.53,
       "currency": "INR",
       "unitsConsumedKwh": 275.67,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00509",
@@ -8895,7 +9065,8 @@
       "amount": 4523.4,
       "currency": "INR",
       "unitsConsumedKwh": 603.12,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00512",
@@ -8937,7 +9108,8 @@
       "amount": 3261.53,
       "currency": "INR",
       "unitsConsumedKwh": 434.87,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00515",
@@ -9007,7 +9179,8 @@
       "amount": 2212.88,
       "currency": "INR",
       "unitsConsumedKwh": 295.05,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00520",
@@ -9049,7 +9222,8 @@
       "amount": 4832.93,
       "currency": "INR",
       "unitsConsumedKwh": 644.39,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00523",
@@ -9091,7 +9265,8 @@
       "amount": 4147.88,
       "currency": "INR",
       "unitsConsumedKwh": 553.05,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00526",
@@ -9133,7 +9308,8 @@
       "amount": 2977.13,
       "currency": "INR",
       "unitsConsumedKwh": 396.95,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00529",
@@ -9161,7 +9337,8 @@
       "amount": 5208.45,
       "currency": "INR",
       "unitsConsumedKwh": 694.46,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00531",
@@ -9203,7 +9380,8 @@
       "amount": 2510.85,
       "currency": "INR",
       "unitsConsumedKwh": 334.78,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00534",
@@ -9245,7 +9423,8 @@
       "amount": 3911.93,
       "currency": "INR",
       "unitsConsumedKwh": 521.59,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00537",
@@ -9287,7 +9466,8 @@
       "amount": 4944,
       "currency": "INR",
       "unitsConsumedKwh": 659.2,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00540",
@@ -9315,7 +9495,8 @@
       "amount": 4424.85,
       "currency": "INR",
       "unitsConsumedKwh": 589.98,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2025-12-21"
     },
     {
       "id": "bill-00542",
@@ -9357,7 +9538,8 @@
       "amount": 3451.8,
       "currency": "INR",
       "unitsConsumedKwh": 460.24,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-03-21"
     },
     {
       "id": "bill-00545",
@@ -9399,7 +9581,8 @@
       "amount": 5137.13,
       "currency": "INR",
       "unitsConsumedKwh": 684.95,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-06-21"
     },
     {
       "id": "bill-00548",
@@ -9441,7 +9624,8 @@
       "amount": 4381.8,
       "currency": "INR",
       "unitsConsumedKwh": 584.24,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-09-21"
     },
     {
       "id": "bill-00551",
@@ -9511,7 +9695,8 @@
       "amount": 3234.97,
       "currency": "INR",
       "unitsConsumedKwh": 431.33,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-02-21"
     },
     {
       "id": "bill-00556",
@@ -9553,7 +9738,8 @@
       "amount": 2661.6,
       "currency": "INR",
       "unitsConsumedKwh": 354.88,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-05-21"
     },
     {
       "id": "bill-00559",
@@ -9595,7 +9781,8 @@
       "amount": 2383.13,
       "currency": "INR",
       "unitsConsumedKwh": 317.75,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-08-21"
     },
     {
       "id": "bill-00562",
@@ -9637,7 +9824,8 @@
       "amount": 1884.45,
       "currency": "INR",
       "unitsConsumedKwh": 251.26,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-11-21"
     },
     {
       "id": "bill-00565",
@@ -9665,7 +9853,8 @@
       "amount": 3202.35,
       "currency": "INR",
       "unitsConsumedKwh": 426.98,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-01-21"
     },
     {
       "id": "bill-00567",
@@ -9707,7 +9896,8 @@
       "amount": 2452.88,
       "currency": "INR",
       "unitsConsumedKwh": 327.05,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-04-21"
     },
     {
       "id": "bill-00570",
@@ -9749,7 +9939,8 @@
       "amount": 4804.28,
       "currency": "INR",
       "unitsConsumedKwh": 640.57,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-07-21"
     },
     {
       "id": "bill-00573",
@@ -9791,7 +9982,8 @@
       "amount": 3765.97,
       "currency": "INR",
       "unitsConsumedKwh": 502.13,
-      "status": "paid"
+      "status": "paid",
+      "paidAt": "2026-10-21"
     },
     {
       "id": "bill-00576",

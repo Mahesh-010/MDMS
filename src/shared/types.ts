@@ -50,6 +50,7 @@ export interface Bill {
   periodEnd: string
   issuedAt: string
   dueAt: string
+  paidAt?: string
   amount: number
   currency: string
   unitsConsumedKwh: number
