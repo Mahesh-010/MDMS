@@ -1,0 +1,107 @@
+.status-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 28px 16px;
+  background:
+    radial-gradient(ellipse at 88% 8%, var(--color-primary-soft), transparent 42%),
+    var(--color-background);
+}
+
+.status-page-card {
+  display: grid;
+  width: min(100%, 520px);
+  justify-items: center;
+  padding: clamp(28px, 7vw, 48px);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  color: var(--color-text);
+  background: var(--color-surface);
+  box-shadow: var(--color-shadow);
+  text-align: center;
+}
+
+.status-page-mark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  place-items: center;
+  border-radius: 14px;
+  color: #fff;
+  background: #2563eb;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+:root[data-theme='dark'] .status-page-mark {
+  color: #0f172a;
+  background: #93c5fd;
+}
+
+.status-page-code {
+  margin: 0 0 6px;
+  color: var(--color-primary);
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.status-page-eyebrow {
+  margin: 0 0 8px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-page-card h1 {
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: clamp(27px, 6vw, 36px);
+  letter-spacing: -0.04em;
+}
+
+.status-page-description {
+  max-width: 410px;
+  margin: 12px 0 24px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.status-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.status-page-primary,
+.status-page-secondary {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  color: #fff;
+  background: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+:root[data-theme='dark'] .status-page-primary {
+  border-color: #93c5fd;
+  color: #0f172a;
+  background: #93c5fd;
+}
+
+.status-page-secondary {
+  border-color: var(--color-border);
+  color: var(--color-text);
+  background: var(--color-surface);
+}

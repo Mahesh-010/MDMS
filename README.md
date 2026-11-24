@@ -1,96 +1,79 @@
-# React + TypeScript + Vite
+# MDMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Phase 1 of the Meter Data Management System is a read-only front end built with
+Vite, React, TypeScript, React Router, Axios, Recharts, and JSON Server.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js 20.19+ or 22.12+
+- npm
 
-## React Compiler
+## Install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+From the project directory (the folder containing `package.json`), install the
+dependencies:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Generate sample data
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Generate and validate the sample database:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run seed
 ```
 
-## MDMS mock API
+> **Warning:** seeding replaces `db.json` with the generated sample dataset.
 
-The mock data is generated with Indian names and Karnataka addresses. `npm run seed`
-replaces `db.json` with a repeatable sample dataset and validates meter ownership
-and zone relationships. Start the API with `npm run api` and the Vite app with
-`npm run dev` in separate terminals.
+## Run JSON Server
 
-This project uses `json-server@1.0.0-beta.15`. Its query syntax is:
+In a terminal, start the API:
+
+```bash
+npm run api
+```
+
+The API listens at `http://localhost:3001`.
+
+## Run the web app
+
+In a second terminal, start Vite:
+
+```bash
+npm run dev
+```
+
+Open the local URL printed by Vite (normally
+`http://localhost:5173`). The end-user dashboard is at
+`http://localhost:5173/user/dashboard`.
+
+## Other commands
+
+```bash
+npm run build  # Type-check and create a production build in dist/
+npm run lint   # Run ESLint
+npm run preview # Preview the production build locally
+```
+
+The login, password recovery, and dashboard screens are demonstration UI; no
+authentication, payment, or write APIs are connected. Routes not implemented
+yet display title-only placeholders.
+
+## JSON Server query examples
+
+This project uses `json-server@1.0.0-beta.15`. Filtering, sorting, and
+pagination are performed by the API:
 
 ```text
-# Exact filters can be combined
+# Exact filters
 /meters?zoneId=zone-mangalore&status=active
 
 # Conditions use field:operator=value
 /bills?status:eq=overdue&amount:gte=500
 
-# Search one string field (case-insensitive substring)
+# Case-insensitive substring search
 /users?name:contains=an
 
 # Sort ascending, or prefix a field with "-" for descending
@@ -102,7 +85,5 @@ This project uses `json-server@1.0.0-beta.15`. Its query syntax is:
 ```
 
 Supported condition operators include `eq`, `ne`, `lt`, `lte`, `gt`, `gte`,
-`in`, `contains`, `startsWith`, and `endsWith`. String search uses a field
-operator such as `name:contains`; this version does not use the older `_limit`
-pagination option. Pagination uses `_page` and `_per_page` and returns an
-object with `data` and paging metadata.
+`in`, `contains`, `startsWith`, and `endsWith`. Pagination uses `_page` and
+`_per_page` and returns a `data` array with paging metadata.

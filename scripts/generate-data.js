@@ -151,6 +151,10 @@ for (const zone of zoneDefinitions) {
         billDays.push(...readings)
       }
 
+      const status = billStatuses[
+        (monthIndex + zoneCustomers.get(zone.id).indexOf(customer)) % billStatuses.length
+      ]
+      const dueAt = dateString(addDays(periodEndDate, 21))
       const bill = {
         id: billId,
         ownerId: customer.id,
@@ -159,13 +163,14 @@ for (const zone of zoneDefinitions) {
         periodStart,
         periodEnd,
         issuedAt: dateString(addDays(periodEndDate, 1)),
-        dueAt: dateString(addDays(periodEndDate, 21)),
+        dueAt,
+        ...(status === 'paid' ? { paidAt: dueAt } : {}),
         amount: round(estimatedUnits * 7.5),
         currency: 'INR',
         unitsConsumedKwh: isFeatured
           ? round(readings.reduce((sum, reading) => sum + reading.unitsConsumedKwh, 0))
           : estimatedUnits,
-        status: billStatuses[(monthIndex + zoneCustomers.get(zone.id).indexOf(customer)) % billStatuses.length],
+        status,
       }
       bills.push(bill)
       billSequence += 1
