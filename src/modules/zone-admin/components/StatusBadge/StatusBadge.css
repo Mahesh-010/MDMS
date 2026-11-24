@@ -1,0 +1,47 @@
+.mdms-status-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 24px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  padding: 3px 9px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mdms-status-badge--active,
+.mdms-status-badge--paid {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.mdms-status-badge--deactivated,
+.mdms-status-badge--overdue,
+.mdms-status-badge--critical {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.mdms-status-badge--pending,
+.mdms-status-badge--warning {
+  border-color: #fde68a;
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.mdms-status-badge--informational {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
