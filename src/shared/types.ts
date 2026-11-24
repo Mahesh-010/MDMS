@@ -9,6 +9,14 @@ export interface Zone {
   status: RecordStatus
 }
 
+export interface IndianAddress {
+  street: string
+  city: string
+  state: string
+  postalCode: string
+  country: 'India'
+}
+
 export interface User {
   id: string
   name: string
@@ -16,6 +24,7 @@ export interface User {
   role: UserRole
   zoneId: string | null
   status: RecordStatus
+  address: IndianAddress
 }
 
 export type MeterStatus = 'active' | 'inactive' | 'underMaintenance'
@@ -51,6 +60,13 @@ export interface BillDay {
   id: string
   billId: string
   date: string
+  unitsConsumedKwh: number
+  hourlyReadings?: HourlyReading[]
+}
+
+export interface HourlyReading {
+  id: string
+  hour: string
   unitsConsumedKwh: number
 }
 
