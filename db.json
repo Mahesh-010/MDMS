@@ -1,36 +1,463 @@
-
 {
-  "users": [
+  "zones": [
     {
-      "id": "1",
-      "name": "Sowrabh",
-      "email": "sowrabh@gmail.com",
-      "role": "Admin"
+      "id": "zone-north",
+      "name": "North Zone",
+      "code": "NORTH",
+      "status": "active"
     },
     {
-      "id": "2",
-      "name": "Rahul",
-      "email": "rahul@gmail.com",
-      "role": "User"
-    },
-    {
-      "id": "3",
-      "name": "Kiran",
-      "email": "kiran@gmail.com",
-      "role": "User"
+      "id": "zone-south",
+      "name": "South Zone",
+      "code": "SOUTH",
+      "status": "active"
     }
   ],
-  "dailyData": [
-    { "id": "1", "date": "2026-11-01", "units": 12.5 },
-    { "id": "2", "date": "2026-11-02", "units": 14.2 },
-    { "id": "3", "date": "2026-11-03", "units": 11.8 }
+  "users": [
+    {
+      "id": "user-enterprise-001",
+      "name": "Enterprise Operator",
+      "email": "operator@mdms.example",
+      "role": "enterprise",
+      "zoneId": null,
+      "status": "active"
+    },
+    {
+      "id": "user-zone-north-001",
+      "name": "North Zone Administrator",
+      "email": "north.admin@mdms.example",
+      "role": "zoneAdmin",
+      "zoneId": "zone-north",
+      "status": "active"
+    },
+    {
+      "id": "customer-001",
+      "name": "Sowrabh",
+      "email": "sowrabh@example.com",
+      "role": "customer",
+      "zoneId": "zone-north",
+      "status": "active"
+    },
+    {
+      "id": "customer-002",
+      "name": "Rahul",
+      "email": "rahul@example.com",
+      "role": "customer",
+      "zoneId": "zone-south",
+      "status": "active"
+    }
   ],
-  "weeklyData": [
-    { "id": "1", "week": "Week 1", "units": 85.4 },
-    { "id": "2", "week": "Week 2", "units": 92.1 }
+  "meters": [
+    {
+      "id": "meter-001",
+      "serialNumber": "MDMS-N-10001",
+      "ownerId": "customer-001",
+      "zoneId": "zone-north",
+      "status": "active",
+      "installedAt": "2024-06-15",
+      "latestReadingKwh": 12480.6
+    },
+    {
+      "id": "meter-002",
+      "serialNumber": "MDMS-N-10002",
+      "ownerId": "customer-001",
+      "zoneId": "zone-north",
+      "status": "active",
+      "installedAt": "2025-02-10",
+      "latestReadingKwh": 6842.1
+    },
+    {
+      "id": "meter-003",
+      "serialNumber": "MDMS-S-20001",
+      "ownerId": "customer-002",
+      "zoneId": "zone-south",
+      "status": "active",
+      "installedAt": "2023-11-03",
+      "latestReadingKwh": 20871.3
+    }
   ],
-  "monthlyData": [
-    { "id": "1", "month": "October", "units": 370.6 },
-    { "id": "2", "month": "November", "units": 348.9 }
+  "bills": [
+    {
+      "id": "bill-001",
+      "ownerId": "customer-001",
+      "meterId": "meter-001",
+      "zoneId": "zone-north",
+      "periodStart": "2026-10-01",
+      "periodEnd": "2026-10-31",
+      "issuedAt": "2026-11-01",
+      "dueAt": "2026-11-20",
+      "amount": 68.42,
+      "currency": "USD",
+      "unitsConsumedKwh": 342.1,
+      "status": "paid"
+    },
+    {
+      "id": "bill-002",
+      "ownerId": "customer-001",
+      "meterId": "meter-002",
+      "zoneId": "zone-north",
+      "periodStart": "2026-10-01",
+      "periodEnd": "2026-10-31",
+      "issuedAt": "2026-11-01",
+      "dueAt": "2026-11-20",
+      "amount": 41.76,
+      "currency": "USD",
+      "unitsConsumedKwh": 208.8,
+      "status": "pending"
+    },
+    {
+      "id": "bill-003",
+      "ownerId": "customer-002",
+      "meterId": "meter-003",
+      "zoneId": "zone-south",
+      "periodStart": "2026-10-01",
+      "periodEnd": "2026-10-31",
+      "issuedAt": "2026-11-01",
+      "dueAt": "2026-11-20",
+      "amount": 91.14,
+      "currency": "USD",
+      "unitsConsumedKwh": 455.7,
+      "status": "overdue"
+    }
+  ],
+  "billDays": [
+    {
+      "id": "bill-day-001",
+      "billId": "bill-001",
+      "date": "2026-10-01",
+      "unitsConsumedKwh": 11.2
+    },
+    {
+      "id": "bill-day-002",
+      "billId": "bill-001",
+      "date": "2026-10-02",
+      "unitsConsumedKwh": 10.8
+    },
+    {
+      "id": "bill-day-003",
+      "billId": "bill-001",
+      "date": "2026-10-03",
+      "unitsConsumedKwh": 12.4
+    },
+    {
+      "id": "bill-day-004",
+      "billId": "bill-002",
+      "date": "2026-10-01",
+      "unitsConsumedKwh": 7.1
+    },
+    {
+      "id": "bill-day-005",
+      "billId": "bill-002",
+      "date": "2026-10-02",
+      "unitsConsumedKwh": 6.8
+    },
+    {
+      "id": "bill-day-006",
+      "billId": "bill-003",
+      "date": "2026-10-01",
+      "unitsConsumedKwh": 15.3
+    }
+  ],
+  "consumption": [
+    {
+      "id": "cons-customer-day-001",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "day",
+      "periodStart": "2026-11-01",
+      "label": "Nov 1",
+      "unitsKwh": 12.5
+    },
+    {
+      "id": "cons-customer-day-002",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "day",
+      "periodStart": "2026-11-02",
+      "label": "Nov 2",
+      "unitsKwh": 14.2
+    },
+    {
+      "id": "cons-customer-day-003",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "day",
+      "periodStart": "2026-11-03",
+      "label": "Nov 3",
+      "unitsKwh": 11.8
+    },
+    {
+      "id": "cons-customer-day-004",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "day",
+      "periodStart": "2026-11-04",
+      "label": "Nov 4",
+      "unitsKwh": 13.6
+    },
+    {
+      "id": "cons-customer-day-005",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "day",
+      "periodStart": "2026-11-05",
+      "label": "Nov 5",
+      "unitsKwh": 10.9
+    },
+    {
+      "id": "cons-customer-week-001",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "week",
+      "periodStart": "2026-10-26",
+      "label": "Week of Oct 26",
+      "unitsKwh": 85.4
+    },
+    {
+      "id": "cons-customer-week-002",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "week",
+      "periodStart": "2026-11-02",
+      "label": "Week of Nov 2",
+      "unitsKwh": 92.1
+    },
+    {
+      "id": "cons-customer-month-001",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "month",
+      "periodStart": "2026-10-01",
+      "label": "October",
+      "unitsKwh": 550.9
+    },
+    {
+      "id": "cons-customer-month-002",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "month",
+      "periodStart": "2026-11-01",
+      "label": "November",
+      "unitsKwh": 348.9
+    },
+    {
+      "id": "cons-customer-year-001",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "year",
+      "periodStart": "2025-01-01",
+      "label": "2025",
+      "unitsKwh": 5820.4
+    },
+    {
+      "id": "cons-customer-year-002",
+      "scopeType": "customer",
+      "userId": "customer-001",
+      "zoneId": "zone-north",
+      "period": "year",
+      "periodStart": "2026-01-01",
+      "label": "2026",
+      "unitsKwh": 4912.7
+    },
+    {
+      "id": "cons-zone-north-day-001",
+      "scopeType": "zone",
+      "userId": null,
+      "zoneId": "zone-north",
+      "period": "day",
+      "periodStart": "2026-11-05",
+      "label": "Nov 5",
+      "unitsKwh": 612.4
+    },
+    {
+      "id": "cons-zone-north-week-001",
+      "scopeType": "zone",
+      "userId": null,
+      "zoneId": "zone-north",
+      "period": "week",
+      "periodStart": "2026-11-02",
+      "label": "Week of Nov 2",
+      "unitsKwh": 4280.7
+    },
+    {
+      "id": "cons-customer2-month-001",
+      "scopeType": "customer",
+      "userId": "customer-002",
+      "zoneId": "zone-south",
+      "period": "month",
+      "periodStart": "2026-11-01",
+      "label": "November",
+      "unitsKwh": 455.7
+    },
+    {
+      "id": "cons-zone-north-month-001",
+      "scopeType": "zone",
+      "userId": null,
+      "zoneId": "zone-north",
+      "period": "month",
+      "periodStart": "2026-11-01",
+      "label": "November",
+      "unitsKwh": 18420.6
+    },
+    {
+      "id": "cons-zone-north-year-001",
+      "scopeType": "zone",
+      "userId": null,
+      "zoneId": "zone-north",
+      "period": "year",
+      "periodStart": "2026-01-01",
+      "label": "2026",
+      "unitsKwh": 216430.2
+    },
+    {
+      "id": "cons-zone-south-month-001",
+      "scopeType": "zone",
+      "userId": null,
+      "zoneId": "zone-south",
+      "period": "month",
+      "periodStart": "2026-11-01",
+      "label": "November",
+      "unitsKwh": 15310.2
+    },
+    {
+      "id": "cons-enterprise-month-001",
+      "scopeType": "enterprise",
+      "userId": null,
+      "zoneId": null,
+      "period": "month",
+      "periodStart": "2026-11-01",
+      "label": "November",
+      "unitsKwh": 33730.8
+    },
+    {
+      "id": "cons-enterprise-day-001",
+      "scopeType": "enterprise",
+      "userId": null,
+      "zoneId": null,
+      "period": "day",
+      "periodStart": "2026-11-05",
+      "label": "Nov 5",
+      "unitsKwh": 1284.5
+    },
+    {
+      "id": "cons-enterprise-week-001",
+      "scopeType": "enterprise",
+      "userId": null,
+      "zoneId": null,
+      "period": "week",
+      "periodStart": "2026-11-02",
+      "label": "Week of Nov 2",
+      "unitsKwh": 9654.2
+    },
+    {
+      "id": "cons-enterprise-year-001",
+      "scopeType": "enterprise",
+      "userId": null,
+      "zoneId": null,
+      "period": "year",
+      "periodStart": "2026-01-01",
+      "label": "2026",
+      "unitsKwh": 398612.5
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alert-001",
+      "userId": null,
+      "zoneId": "zone-north",
+      "meterId": "meter-001",
+      "title": "Unusually high usage",
+      "message": "Daily consumption exceeded the configured threshold.",
+      "severity": "warning",
+      "status": "open",
+      "createdAt": "2026-11-05T08:30:00Z"
+    },
+    {
+      "id": "alert-002",
+      "userId": "customer-002",
+      "zoneId": "zone-south",
+      "meterId": "meter-003",
+      "title": "Meter reading delayed",
+      "message": "No new reading has been received in the expected interval.",
+      "severity": "info",
+      "status": "acknowledged",
+      "createdAt": "2026-11-04T14:10:00Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notification-001",
+      "userId": "customer-001",
+      "title": "New bill available",
+      "message": "Your October bill is ready to review.",
+      "createdAt": "2026-11-01T09:00:00Z",
+      "readAt": null
+    },
+    {
+      "id": "notification-002",
+      "userId": "customer-001",
+      "title": "Meter data updated",
+      "message": "Recent consumption data is now available.",
+      "createdAt": "2026-11-05T10:00:00Z",
+      "readAt": "2026-11-05T11:15:00Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit-001",
+      "userId": "user-zone-north-001",
+      "zoneId": "zone-north",
+      "action": "view",
+      "entityType": "bill",
+      "entityId": "bill-001",
+      "details": "Viewed bill summary.",
+      "createdAt": "2026-11-06T08:20:00Z"
+    },
+    {
+      "id": "audit-002",
+      "userId": "user-enterprise-001",
+      "zoneId": null,
+      "action": "view",
+      "entityType": "consumption",
+      "entityId": "cons-enterprise-month-001",
+      "details": "Viewed enterprise monthly consumption.",
+      "createdAt": "2026-11-06T09:05:00Z"
+    }
+  ],
+  "settings": [
+    {
+      "id": "setting-001",
+      "key": "consumption.unit",
+      "value": "kWh",
+      "scope": "enterprise",
+      "userId": null,
+      "zoneId": null
+    },
+    {
+      "id": "setting-002",
+      "key": "alert.dailyUsageThresholdKwh",
+      "value": 80,
+      "scope": "zone",
+      "userId": null,
+      "zoneId": "zone-north"
+    },
+    {
+      "id": "setting-003",
+      "key": "dashboard.theme",
+      "value": "system",
+      "scope": "user",
+      "userId": "customer-001",
+      "zoneId": null
+    }
   ]
 }
