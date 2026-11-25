@@ -1,10 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { PageHeader } from "../../shared/components/PageHeader";
 import { StatCard } from "../../shared/components/StatCard";
-import {
-  StatusBadge,
-  type StatusBadgeStatus,
-} from "../../shared/components/StatusBadge";
+import { StatusBadge } from "../../shared/components/StatusBadge";
 import { Pagination } from "../../shared/components/Pagination";
 import { Loader } from "../../shared/components/Loader";
 import { getCustomerBills } from "../services/billsService";
@@ -33,14 +31,10 @@ function formatDate(date: string) {
   }).format(new Date(`${date.slice(0, 10)}T00:00:00Z`));
 }
 
-function getStatusLabel(status: BillStatus): StatusBadgeStatus {
-  const labels: Record<BillStatus, StatusBadgeStatus> = {
-    paid: "Paid",
-    pending: "Pending",
-    overdue: "Overdue",
-  };
-
-  return labels[status];
+function getStatusLabel(status: BillStatus): "Paid" | "Pending" | "Overdue" {
+  if (status === "paid") return "Paid";
+  if (status === "pending") return "Pending";
+  return "Overdue";
 }
 
 export default function BillsPage() {
@@ -54,7 +48,7 @@ export default function BillsPage() {
   const [sortOrder, setSortOrder] = useState<SortOrder>("newest");
   const [currentPage, setCurrentPage] = useState(1);
 
-  async function loadBills() {
+  const loadBills = useCallback(async () => {
     setLoading(true);
     setError(null);
 
@@ -71,11 +65,11 @@ export default function BillsPage() {
     } finally {
       setLoading(false);
     }
-  }
+  }, []);
 
   useEffect(() => {
     void loadBills();
-  }, []);
+  }, [loadBills]);
 
   const summary = useMemo(() => {
     const paid = bills.filter((bill) => bill.status === "paid");
@@ -105,14 +99,11 @@ export default function BillsPage() {
     if (search.trim()) {
       const query = search.trim().toLowerCase();
 
-      result = result.filter((bill) => {
-        return (
-          bill.id.toLowerCase().includes(query) ||
-          bill.meterId.toLowerCase().includes(query) ||
-          bill.periodStart.toLowerCase().includes(query) ||
-          bill.periodEnd.toLowerCase().includes(query)
-        );
-      });
+      result = result.filter((bill) =>
+        [bill.id, bill.meterId, bill.periodStart, bill.periodEnd].some(
+          (value) => value.toLowerCase().includes(query),
+        ),
+      );
     }
 
     result.sort((a, b) => {
@@ -181,7 +172,6 @@ export default function BillsPage() {
         subtitle={`View and track your electricity bills${customerName ? `, ${customerName}` : ""}.`}
       />
 
-      {/* Summary cards */}
       <section className="bills-summary">
         <StatCard
           label="Total Bills"
@@ -208,7 +198,6 @@ export default function BillsPage() {
         />
       </section>
 
-      {/* Outstanding balance */}
       <section className="bills-outstanding">
         <div>
           <span className="bills-outstanding-label">
@@ -223,7 +212,6 @@ export default function BillsPage() {
         </div>
       </section>
 
-      {/* Bills table */}
       <section className="bills-table-section">
         <div className="bills-section-heading">
           <div>
@@ -236,7 +224,6 @@ export default function BillsPage() {
           </span>
         </div>
 
-        {/* Search and filters */}
         <div className="bills-toolbar">
           <div className="bills-search">
             <span aria-hidden="true">⌕</span>
@@ -276,7 +263,6 @@ export default function BillsPage() {
           </div>
         </div>
 
-        {/* Table */}
         {visibleBills.length > 0 ? (
           <>
             <div className="bills-table-wrapper">
@@ -297,7 +283,12 @@ export default function BillsPage() {
                   {visibleBills.map((bill) => (
                     <tr key={bill.id}>
                       <td>
-                        <span className="bills-id">{bill.id}</span>
+                        <Link
+                          className="bills-id-link"
+                          to={`/user/bills/${encodeURIComponent(bill.id)}`}
+                        >
+                          {bill.id}
+                        </Link>
                         <span className="bills-meter-id">{bill.meterId}</span>
                       </td>
 
@@ -311,7 +302,6 @@ export default function BillsPage() {
                       </td>
 
                       <td>{formatDate(bill.issuedAt)}</td>
-
                       <td>{formatDate(bill.dueAt)}</td>
 
                       <td>
@@ -345,6 +335,7 @@ export default function BillsPage() {
             <span aria-hidden="true">▤</span>
             <h3>No bills found</h3>
             <p>Try changing your search or payment status filter.</p>
+
             <button
               type="button"
               className="ui-button ui-button--secondary"
