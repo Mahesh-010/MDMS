@@ -1,3 +1,4 @@
+
 export type AppRole = 'end-user' | 'zone' | 'enterprise'
 export type ThemeMode = 'light' | 'dark'
 
@@ -12,7 +13,9 @@ export const menuConfig: Record<AppRole, MenuItem[]> = {
     { label: 'Bills & Payments', to: '/user/bills' },
     { label: 'Meter Data', to: '/user/meter-data' },
     { label: 'Alerts', to: '/user/alerts' },
+    { label: 'Settings', to: '/user/settings' },
   ],
+
   zone: [
     { label: 'Dashboard', to: '/zone/dashboard' },
     { label: 'Meter Management', to: '/zone/meters' },
@@ -21,6 +24,7 @@ export const menuConfig: Record<AppRole, MenuItem[]> = {
     { label: 'Alerts', to: '/zone/alerts' },
     { label: 'Settings', to: '/zone/settings' },
   ],
+
   enterprise: [
     { label: 'Dashboard', to: '/enterprise/dashboard' },
     { label: 'Zone Management', to: '/enterprise/zones' },
