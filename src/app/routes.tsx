@@ -235,7 +235,22 @@ const appRoutes: RouteObject[] = [
           };
         },
       },
-      { path: "zones", element: pageElement("Enterprise zones") },
+      {
+        path: "zones",
+        lazy: async () => {
+          const { default: ZoneManagementPage } = await import(
+            "../modules/enterprise-admin/pages/ZoneManagementPage"
+          );
+
+          return {
+            element: (
+              <Suspense fallback={<PageLoader />}>
+                <ZoneManagementPage />
+              </Suspense>
+            ),
+          };
+        },
+      },
       { path: "zones/:zoneId", element: pageElement("Zone details") },
       { path: "meters", element: pageElement("Enterprise meters") },
       { path: "users", element: pageElement("Enterprise users") },
