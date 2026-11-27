@@ -33,27 +33,31 @@ export default function UserManagementPage() {
   const [roleFilter, setRoleFilter] = useState<RoleFilter>("all");
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
 
-  const loadData = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const [userRecords, zoneRecords] = await Promise.all([
-        getEnterpriseUsers(),
-        getUserZones(),
-      ]);
-
-      setUsers(userRecords);
-      setZones(zoneRecords);
-    } catch (err) {
-      setError(getErrorMessage(err));
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const loadData = useCallback(
+    () => Promise.all([getEnterpriseUsers(), getUserZones()]),
+    [],
+  );
 
   useEffect(() => {
-    void loadData();
+    let active = true;
+
+    void loadData()
+      .then(([userRecords, zoneRecords]) => {
+        if (active) {
+          setUsers(userRecords);
+          setZones(zoneRecords);
+        }
+      })
+      .catch((err: unknown) => {
+        if (active) setError(getErrorMessage(err));
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
   }, [loadData]);
 
   const zoneMap = useMemo(
@@ -182,7 +186,17 @@ export default function UserManagementPage() {
             <button
               type="button"
               className="ui-button ui-button--secondary"
-              onClick={() => void loadData()}
+              onClick={() => {
+                setLoading(true);
+                setError(null);
+                void loadData()
+                  .then(([userRecords, zoneRecords]) => {
+                    setUsers(userRecords);
+                    setZones(zoneRecords);
+                  })
+                  .catch((err: unknown) => setError(getErrorMessage(err)))
+                  .finally(() => setLoading(false));
+              }}
             >
               Try again
             </button>

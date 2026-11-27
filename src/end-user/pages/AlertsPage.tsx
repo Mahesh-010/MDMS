@@ -55,23 +55,31 @@ export default function AlertsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const loadAlerts = useCallback(async () => {
-    try {
-      const response = await getCustomerAlerts();
-      setData(response);
-    } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : "Unable to load alerts and notifications.",
-      );
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const loadAlerts = useCallback(() => getCustomerAlerts(), []);
 
   useEffect(() => {
-    void loadAlerts();
+    let active = true;
+
+    void loadAlerts()
+      .then((response) => {
+        if (active) setData(response);
+      })
+      .catch((err: unknown) => {
+        if (active) {
+          setError(
+            err instanceof Error
+              ? err.message
+              : "Unable to load alerts and notifications.",
+          );
+        }
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
   }, [loadAlerts]);
 
   const alerts = data?.alerts ?? EMPTY_ALERTS;
@@ -150,7 +158,16 @@ export default function AlertsPage() {
             onClick={() => {
               setLoading(true);
               setError(null);
-              void loadAlerts();
+              void loadAlerts()
+                .then(setData)
+                .catch((err: unknown) => {
+                  setError(
+                    err instanceof Error
+                      ? err.message
+                      : "Unable to load alerts and notifications.",
+                  );
+                })
+                .finally(() => setLoading(false));
             }}
           >
             Try again

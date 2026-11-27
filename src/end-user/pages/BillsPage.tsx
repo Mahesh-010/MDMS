@@ -48,27 +48,34 @@ export default function BillsPage() {
   const [sortOrder, setSortOrder] = useState<SortOrder>("newest");
   const [currentPage, setCurrentPage] = useState(1);
 
-  const loadBills = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const response = await getCustomerBills();
-      setBills(response.bills);
-      setCustomerName(response.customerName);
-    } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : "Unable to load billing information.",
-      );
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const loadBills = useCallback(() => getCustomerBills(), []);
 
   useEffect(() => {
-    void loadBills();
+    let active = true;
+
+    void loadBills()
+      .then((response) => {
+        if (active) {
+          setBills(response.bills);
+          setCustomerName(response.customerName);
+        }
+      })
+      .catch((err: unknown) => {
+        if (active) {
+          setError(
+            err instanceof Error
+              ? err.message
+              : "Unable to load billing information.",
+          );
+        }
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
   }, [loadBills]);
 
   const summary = useMemo(() => {
@@ -156,7 +163,23 @@ export default function BillsPage() {
           <button
             className="ui-button ui-button--primary"
             type="button"
-            onClick={() => void loadBills()}
+            onClick={() => {
+              setLoading(true);
+              setError(null);
+              void loadBills()
+                .then((response) => {
+                  setBills(response.bills);
+                  setCustomerName(response.customerName);
+                })
+                .catch((err: unknown) => {
+                  setError(
+                    err instanceof Error
+                      ? err.message
+                      : "Unable to load billing information.",
+                  );
+                })
+                .finally(() => setLoading(false));
+            }}
           >
             Try again
           </button>

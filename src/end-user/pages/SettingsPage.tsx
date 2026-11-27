@@ -76,31 +76,39 @@ export default function SettingsPage() {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
-  const loadSettings = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const result = await getCustomerSettings();
-
-      setData(result);
-      setProfile({
-        name: result.profile.name,
-        email: result.profile.email,
-        address: { ...result.profile.address },
-      });
-      setPreferences(result.preferences);
-    } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Unable to load account settings.",
-      );
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const loadSettings = useCallback(() => getCustomerSettings(), []);
 
   useEffect(() => {
-    void loadSettings();
+    let active = true;
+
+    void loadSettings()
+      .then((result) => {
+        if (active) {
+          setData(result);
+          setProfile({
+            name: result.profile.name,
+            email: result.profile.email,
+            address: { ...result.profile.address },
+          });
+          setPreferences(result.preferences);
+        }
+      })
+      .catch((err: unknown) => {
+        if (active) {
+          setError(
+            err instanceof Error
+              ? err.message
+              : "Unable to load account settings.",
+          );
+        }
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
   }, [loadSettings]);
 
   function updateAddress(field: keyof IndianAddress, value: string) {
@@ -189,7 +197,28 @@ export default function SettingsPage() {
           <button
             className="ui-button ui-button--primary"
             type="button"
-            onClick={() => void loadSettings()}
+            onClick={() => {
+              setLoading(true);
+              setError(null);
+              void loadSettings()
+                .then((result) => {
+                  setData(result);
+                  setProfile({
+                    name: result.profile.name,
+                    email: result.profile.email,
+                    address: { ...result.profile.address },
+                  });
+                  setPreferences(result.preferences);
+                })
+                .catch((err: unknown) => {
+                  setError(
+                    err instanceof Error
+                      ? err.message
+                      : "Unable to load account settings.",
+                  );
+                })
+                .finally(() => setLoading(false));
+            }}
           >
             Try again
           </button>

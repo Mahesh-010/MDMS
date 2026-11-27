@@ -68,7 +68,7 @@ export default function MeterDataPage() {
   const [consumption, setConsumption] =
     useState<CustomerConsumptionPoint[]>([])
   const [loading, setLoading] = useState(true)
-  const [chartLoading, setChartLoading] = useState(false)
+  const [chartLoading, setChartLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [chartError, setChartError] = useState<string | null>(null)
 
@@ -78,61 +78,70 @@ export default function MeterDataPage() {
     null
 
   const loadChart = useCallback(
-    async (userId: string, selectedPeriod: TimeRange) => {
-      setChartLoading(true)
-      setChartError(null)
-
-      try {
-        const result = await getCustomerConsumption(
-          userId,
-          periodMap[selectedPeriod],
-        )
-        setConsumption(result)
-      } catch (err) {
-        setChartError(
-          err instanceof Error
-            ? err.message
-            : 'Unable to load consumption history.',
-        )
-        setConsumption([])
-      } finally {
-        setChartLoading(false)
-      }
-    },
+    (userId: string, selectedPeriod: TimeRange) =>
+      getCustomerConsumption(userId, periodMap[selectedPeriod]),
     [],
   )
 
-  const loadMeters = useCallback(async () => {
-    setLoading(true)
-    setError(null)
-
-    try {
-      const result = await getCustomerMeterData()
-      setData(result)
-
-      setSelectedMeterId((current) =>
-        result.meters.some((meter) => meter.id === current)
-          ? current
-          : result.meters[0]?.id ?? '',
-      )
-    } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'Unable to load meter information.',
-      )
-    } finally {
-      setLoading(false)
-    }
-  }, [])
+  const loadMeters = useCallback(() => getCustomerMeterData(), [])
 
   useEffect(() => {
+    let active = true
+
     void loadMeters()
+      .then((result) => {
+        if (active) {
+          setData(result)
+          setSelectedMeterId((current) =>
+            result.meters.some((meter) => meter.id === current)
+              ? current
+              : result.meters[0]?.id ?? '',
+          )
+        }
+      })
+      .catch((err: unknown) => {
+        if (active) {
+          setError(
+            err instanceof Error
+              ? err.message
+              : 'Unable to load meter information.',
+          )
+        }
+      })
+      .finally(() => {
+        if (active) setLoading(false)
+      })
+
+    return () => {
+      active = false
+    }
   }, [loadMeters])
 
   useEffect(() => {
-    if (data) {
-      void loadChart(data.customer.id, period)
+    if (!data) return
+
+    let active = true
+
+    void loadChart(data.customer.id, period)
+      .then((result) => {
+        if (active) setConsumption(result)
+      })
+      .catch((err: unknown) => {
+        if (active) {
+          setChartError(
+            err instanceof Error
+              ? err.message
+              : 'Unable to load consumption history.',
+          )
+          setConsumption([])
+        }
+      })
+      .finally(() => {
+        if (active) setChartLoading(false)
+      })
+
+    return () => {
+      active = false
     }
   }, [data, period, loadChart])
 
@@ -158,7 +167,27 @@ export default function MeterDataPage() {
           <button
             className="ui-button ui-button--primary"
             type="button"
-            onClick={() => void loadMeters()}
+            onClick={() => {
+              setLoading(true)
+              setError(null)
+              void loadMeters()
+                .then((result) => {
+                  setData(result)
+                  setSelectedMeterId((current) =>
+                    result.meters.some((meter) => meter.id === current)
+                      ? current
+                      : result.meters[0]?.id ?? '',
+                  )
+                })
+                .catch((err: unknown) => {
+                  setError(
+                    err instanceof Error
+                      ? err.message
+                      : 'Unable to load meter information.',
+                  )
+                })
+                .finally(() => setLoading(false))
+            }}
           >
             Try again
           </button>
@@ -295,7 +324,13 @@ export default function MeterDataPage() {
         title="Consumption History"
         subtitle="Your total customer account electricity consumption"
         timeRange={period}
-        onTimeRangeChange={setPeriod}
+        onTimeRangeChange={(nextPeriod) => {
+          if (nextPeriod !== period) {
+            setChartLoading(true)
+            setChartError(null)
+            setPeriod(nextPeriod)
+          }
+        }}
       >
         {chartLoading ? (
           <div className="meter-chart-message">

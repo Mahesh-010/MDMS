@@ -45,29 +45,36 @@ export default function BillDetailsPage() {
 
   const loadDetails = useCallback(async () => {
     if (!billId) {
-      setError("Bill ID is missing.");
-      setLoading(false);
-      return;
+      throw new Error("Bill ID is missing.");
     }
 
-    setLoading(true);
-    setError(null);
-
-    try {
-      const response = await getBillDetails(billId);
-      setDetails(response);
-      setSelectedDayId(response.billDays[0]?.id ?? "");
-    } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Unable to load bill details.",
-      );
-    } finally {
-      setLoading(false);
-    }
+    return getBillDetails(billId);
   }, [billId]);
 
   useEffect(() => {
-    void loadDetails();
+    let active = true;
+
+    void loadDetails()
+      .then((response) => {
+        if (active) {
+          setDetails(response);
+          setSelectedDayId(response.billDays[0]?.id ?? "");
+        }
+      })
+      .catch((err: unknown) => {
+        if (active) {
+          setError(
+            err instanceof Error ? err.message : "Unable to load bill details.",
+          );
+        }
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
   }, [loadDetails]);
 
   if (loading) {

@@ -62,20 +62,25 @@ export default function ZoneManagementPage() {
   const [form, setForm] = useState<ZoneFormValues>(initialForm);
   const [formError, setFormError] = useState<string | null>(null);
 
-  const loadZones = useCallback(async () => {
-    try {
-      setError(null);
-      const result = await getZones();
-      setZones(result);
-    } catch (err) {
-      setError(getErrorMessage(err));
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const loadZones = useCallback(() => getZones(), []);
 
   useEffect(() => {
-    void loadZones();
+    let active = true;
+
+    void loadZones()
+      .then((result) => {
+        if (active) setZones(result);
+      })
+      .catch((err: unknown) => {
+        if (active) setError(getErrorMessage(err));
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
   }, [loadZones]);
 
   const filteredZones = useMemo(() => {
@@ -352,7 +357,11 @@ export default function ZoneManagementPage() {
               className="ui-button ui-button--secondary"
               onClick={() => {
                 setLoading(true);
-                void loadZones();
+                setError(null);
+                void loadZones()
+                  .then(setZones)
+                  .catch((err: unknown) => setError(getErrorMessage(err)))
+                  .finally(() => setLoading(false));
               }}
             >
               Try again

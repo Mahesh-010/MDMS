@@ -284,10 +284,70 @@ const appRoutes: RouteObject[] = [
           };
         },
       },
-      { path: "reports", element: pageElement("Enterprise reports") },
-      { path: "alerts", element: pageElement("Enterprise alerts") },
-      { path: "audit-logs", element: pageElement("Audit logs") },
-      { path: "settings", element: pageElement("Enterprise settings") },
+      {
+        path: "reports",
+        lazy: async () => {
+          const { default: ReportsAnalyticsPage } = await import(
+            "../modules/enterprise-admin/pages/ReportsAnalyticsPage"
+          );
+
+          return {
+            element: (
+              <Suspense fallback={<PageLoader />}>
+                <ReportsAnalyticsPage />
+              </Suspense>
+            ),
+          };
+        },
+      },
+      {
+        path: "alerts",
+        lazy: async () => {
+          const { default: AlertsPage } = await import(
+            "../modules/enterprise-admin/pages/AlertsPage"
+          );
+
+          return {
+            element: (
+              <Suspense fallback={<PageLoader />}>
+                <AlertsPage />
+              </Suspense>
+            ),
+          };
+        },
+      },
+      {
+        path: "audit-logs",
+        lazy: async () => {
+          const { default: AuditLogsPage } = await import(
+            "../modules/enterprise-admin/pages/AuditLogsPage"
+          );
+
+          return {
+            element: (
+              <Suspense fallback={<PageLoader />}>
+                <AuditLogsPage />
+              </Suspense>
+            ),
+          };
+        },
+      },
+      {
+        path: "settings",
+        lazy: async () => {
+          const { default: EnterpriseSettingsPage } = await import(
+            "../modules/enterprise-admin/pages/EnterpriseSettingsPage"
+          );
+
+          return {
+            element: (
+              <Suspense fallback={<PageLoader />}>
+                <EnterpriseSettingsPage />
+              </Suspense>
+            ),
+          };
+        },
+      },
     ],
   },
   {
