@@ -252,8 +252,38 @@ const appRoutes: RouteObject[] = [
         },
       },
       { path: "zones/:zoneId", element: pageElement("Zone details") },
-      { path: "meters", element: pageElement("Enterprise meters") },
-      { path: "users", element: pageElement("Enterprise users") },
+      {
+        path: "meters",
+        lazy: async () => {
+          const { default: MeterManagementPage } = await import(
+            "../modules/enterprise-admin/pages/MeterManagementPage"
+          );
+
+          return {
+            element: (
+              <Suspense fallback={<PageLoader />}>
+                <MeterManagementPage />
+              </Suspense>
+            ),
+          };
+        },
+      },
+      {
+        path: "users",
+        lazy: async () => {
+          const { default: UserManagementPage } = await import(
+            "../modules/enterprise-admin/pages/UserManagementPage"
+          );
+
+          return {
+            element: (
+              <Suspense fallback={<PageLoader />}>
+                <UserManagementPage />
+              </Suspense>
+            ),
+          };
+        },
+      },
       { path: "reports", element: pageElement("Enterprise reports") },
       { path: "alerts", element: pageElement("Enterprise alerts") },
       { path: "audit-logs", element: pageElement("Audit logs") },
