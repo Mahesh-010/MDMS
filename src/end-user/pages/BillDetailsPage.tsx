@@ -9,7 +9,7 @@ import type {
   BillDetailsData,
   // The data type is imported from the billing service.
 } from "../services/billsService";
-import type { BillStatus, BillDay } from "../../shared/types";
+import type { BillStatus } from "../../shared/types";
 import "./BillDetailsPage.css";
 
 function formatCurrency(amount: number, currency = "INR") {

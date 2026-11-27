@@ -220,7 +220,21 @@ const appRoutes: RouteObject[] = [
         index: true,
         element: <Navigate replace to="/enterprise/dashboard" />,
       },
-      { path: "dashboard", element: pageElement("Enterprise dashboard") },
+      {
+        path: "dashboard",
+        lazy: async () => {
+          const { default: EnterpriseDashboardPage } =
+            await import("../modules/enterprise-admin/pages/EnterpriseDashboardPage");
+
+          return {
+            element: (
+              <Suspense fallback={<PageLoader />}>
+                <EnterpriseDashboardPage />
+              </Suspense>
+            ),
+          };
+        },
+      },
       { path: "zones", element: pageElement("Enterprise zones") },
       { path: "zones/:zoneId", element: pageElement("Zone details") },
       { path: "meters", element: pageElement("Enterprise meters") },
